@@ -19,5 +19,13 @@ vim config/dkron.json
 
 * Example
 ```
-vim example/example.go
+import "github.com/gunsluo/dkron-api-go/job_schedule"
+
+url := "http://127.0.0.1:8080/"
+client := job_schedule.NewClient(url)
+
+// status
+statusResp, err := client.Status()
+
+//...
 ```
